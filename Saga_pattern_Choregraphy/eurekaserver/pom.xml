@@ -8,11 +8,11 @@
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../common-bom/pom.xml</relativePath> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.eazybytes</groupId>
+	<groupId>com.gauro</groupId>
 	<artifactId>eurekaserver</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>eurekaserver</name>
-	<description>Service Discovery agent for Eazy Bank microservices</description>
+	<description>Service Discovery agent for microservices</description>
 
 	<dependencies>
 		<dependency>
