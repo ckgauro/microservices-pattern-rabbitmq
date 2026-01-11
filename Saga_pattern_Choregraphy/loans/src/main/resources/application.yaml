@@ -1,3 +1,54 @@
+server:
+  port: 8081
+
 spring:
   application:
     name: loans
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=microservices&ssl=false
+    username: postgres
+    password: oracle
+    driver-class-name: org.postgresql.Driver
+
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: "accounts"
+    description: "Gauro Loans Application"
+    version: "1.0.0"
+
+
+logging:
+  #  level:
+  #    org.hibernate.SQL: debug
+  #    org.hibernate.tool.schema: debug
+  pattern:
+    console: "%green(%d{HH:mm:ss.SSS}) %blue(%-5level) %red([%thread]) %yellow(%logger{15}) -%msg%n"
