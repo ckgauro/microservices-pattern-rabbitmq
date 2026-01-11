@@ -1,26 +1,24 @@
 server:
   port: 8072
 
-app:
-  base-url: "http://localhost:8072"
-
 spring:
   application:
-    name: "gatewayserver"
+    name: gatewayserver
+
   cloud:
     gateway:
       discovery:
         locator:
-          enabled: false
-          lowerCaseSeviceId: true
+          enabled: true
+          lower-case-service-id: true
 
 eureka:
   instance:
-    preferIpAddress: true
+    prefer-ip-address: true
   client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
       defaultZone: "http://localhost:8070/eureka/"
 
 management:
@@ -37,10 +35,10 @@ management:
 
 info:
   app:
-    name: "gatewayserver"
-    description: "Gateway Server Application"
-    version: "1.0.0"
+    name: gatewayserver
+    description: Gateway Server Application
+    version: 1.0.0
 
 logging:
   pattern:
-    console: "%green(%d{HH:mm:ss.SSS}) %blue(%-5level) %red([%thread]) %yello(%logger{15}) - %msg%n"
+    console: "%green(%d{HH:mm:ss.SSS}) %blue(%-5level) %red([%thread]) %yellow(%logger{15}) - %msg%n"

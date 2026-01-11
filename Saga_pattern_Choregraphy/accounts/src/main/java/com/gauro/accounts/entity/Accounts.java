@@ -15,7 +15,6 @@ import lombok.*;
 public class Accounts  extends BaseEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long accountNumber;
     private String accountType;
     private String branchAddress;
