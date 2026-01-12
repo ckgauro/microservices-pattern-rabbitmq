@@ -1,6 +1,7 @@
 package com.gauro.gateway.handler;
 
 import com.gauro.gateway.dto.*;
+import com.gauro.gateway.service.client.CustomerSummaryClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

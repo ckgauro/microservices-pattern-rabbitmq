@@ -1,6 +1,9 @@
 server:
   port: 8072
 
+app:
+  base-url: "http://localhost:8072"
+
 spring:
   application:
     name: gatewayserver
