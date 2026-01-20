@@ -519,7 +519,27 @@ If you want, I can also give you a PlantUML sequence diagram and a minimal worki
 
 
 
-
-
 No file chosenNo file chosen
 ChatGPT can make mistakes. Check important info.
+
+-------
+
+Saga orchestration pattern + rabbitmq + spring cloud stream + using following micro services examples. In each microservices we have to update mobile number [ boolean updateMobileNumber(MobileNumberUpdateDto mobileNumberUpdateDto);] . if Mobile number doesn't find then throw complacent rollback  [ boolean rollbackMobileNumber(MobileNumberUpdateDto mobileNumberUpdateDto);]. Dto class is [public class MobileNumberUpdateDto {
+    private String currentMobileNumber;
+    private String newMobileNumber;
+}
+]
+
+There are 4 microservices in same order microservices run. Here Customer microservices must contain orchestration manager
+1. Customer
+2. Accounts
+3. Cards
+4. Loans
+
+public class MobileNumberUpdateDto {
+    private String currentMobileNumber;
+    private String newMobileNumber;
+}
+
+ boolean updateMobileNumber(MobileNumberUpdateDto mobileNumberUpdateDto);
+ boolean rollbackMobileNumber(MobileNumberUpdateDto mobileNumberUpdateDto);
